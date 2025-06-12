@@ -1,0 +1,17 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int i = 0;
+        int n = nums.length;
+
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[n - 1]; // Replace current with last element
+                n--;                   // Reduce array size
+            } else {
+                i++; // Move to next if current is valid
+            }
+        }
+
+        return n;
+    }
+}
